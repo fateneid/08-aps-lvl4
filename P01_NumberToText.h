@@ -2,99 +2,144 @@
 
 #include <iostream>
 #include <string>
+#include <vector>
 using namespace std;
 
 namespace P01_NumberToText {
 
-	int ReadNumber(string Message) {
-		int Number;
+	long long int ReadNumber(string Message) {
+		long long int Number;
 		cout << Message;
 		cin >> Number;
 		return Number;
 	}
 
-	void WriteNumber(int Num, string OneToNine[9], string ElevenToNineteen[10], string ThirtyToNinety[8], string AboveHundred[8]) {
+	void NumberToTextFor3Digits(string NumInString, string OneToNine[9], string ElevenToNineteen[9], string ThirtyToNinety[8]) {
 
-		string ReverseNumberString = ReverseNumberInString(Num);
+		if (NumInString.length() == 1) {
 
-		if (ReverseNumberString.length() == 1) {
-
-			for (short i = 1; i <= 9; i++) {
-				if (stoi(ReverseNumberString) == i) {
-					cout << OneToNine[i - 1] << " ";
-				}
+			if (NumInString[0] - '0' == 0) {
+				cout << "Zero";
 			}
+			else {
+				cout << OneToNine[(NumInString[0] - '0') - 1];
+			}
+
 		}
-		//else if()
 
+		else if (NumInString.length() == 2) {
 
+			if (NumInString[0] - '0' == 0) {
+				cout << OneToNine[(NumInString[1] - '0') - 1];
+			}
+		    else if (NumInString[0] - '0' == 1 && NumInString[1] - '0' == 0) {
+				cout << "Ten";
+			}
+		    else if ( NumInString[0] - '0' == 1 && NumInString[2] - '0' != 0) {
+				cout << ElevenToNineteen[(NumInString[1] - '0') - 1];
+			}
+			else if (NumInString[0] - '0' >= 2 && NumInString[0] - '0' <= 9) {
+				cout << ThirtyToNinety[NumInString[0] - '0' - 2] << " "
+					<< OneToNine[(NumInString[1] - '0') - 1];
+			}
+
+		}
+
+		else if (NumInString.length() == 3) {
+
+			if (NumInString[0] - '0' == 0 && NumInString[1] - '0' == 0) {
+				cout << OneToNine[(NumInString[2] - '0') - 1];
+			}
+		    else if (NumInString[1] - '0' == 0 && NumInString[2] - '0' == 0) {
+				cout << OneToNine[(NumInString[0] - '0') - 1] << " Hundred";
+
+			}
+			else if (NumInString[1] - '0' == 1 && NumInString[2] - '0' == 0) {
+				cout << OneToNine[(NumInString[0] - '0') - 1] << " Hundred "
+					<< "Ten";
+			}
+			else if (NumInString[1] - '0' == 1 && NumInString[2] - '0' != 0) {
+				cout << OneToNine[(NumInString[0] - '0') - 1] << " Hundred "
+					<< ElevenToNineteen[(NumInString[2] - '0') - 1];
+			}
+			else if (NumInString[1] - '0' >= 2 && NumInString[1] - '0' <= 9) {
+				cout << OneToNine[(NumInString[0] - '0') - 1] << " Hundred "
+					<< ThirtyToNinety[NumInString[1] - '0' - 2] << " "
+					<< OneToNine[(NumInString[2] - '0') - 1];
+			}
+
+		}
+
+	
 	}
 
-	void Num(int Num, string OneToNine[9], string ElevenToNineteen[10], string ThirtyToNinety[8], string AboveHundred[8]) {
-
-		//static short Counter = 1;
-		string ReverseNumberString = ReverseNumberInString(Num);
-
-	/*	if (Counter == 1) {
-			for (short i = 1; i <= 9; i++) {
-				if (ReverseNumberString[0] - '0' == i) {
-					cout << OneToNine[i - 1] << " ";
-				}
-			}
-		}
-		else if (Counter == 2 && ReverseNumberString[1] - '0' == 1) {
-			cout<< ElevenToNineteen[(firstNumAsString - '0') -1]
-		}*/
-
-		for (short i = 0; i < ReverseNumberString.length(); i++) {
-
-			if (ReverseNumberString.length() == 1) {
-				cout << OneToNine[(ReverseNumberString[i] - '0') - 1];
-			}
-			else if (i == 1 && ReverseNumberString[1] - '0' == 1) {
-				cout << ElevenToNineteen[(ReverseNumberString[0] - '0') - 1];
-			}
-			else if (i == 1 && ReverseNumberString[1] - '0' >= 2 && ReverseNumberString[1] - '0' <= 9) {
-				cout << ThirtyToNinety[ReverseNumberString[1] - '0' - 2] << " "
-					<< OneToNine[(ReverseNumberString[0] - '0') - 1];
-			}
-			else if (i == 2 && ReverseNumberString[1] - '0' == 0 && ReverseNumberString[0] - '0' == 0) {
-				cout << OneToNine[(ReverseNumberString[2] - '0') - 1] << AboveHundred[0];
-
-			}
-
-		}	
-
-	}
-
-	string ReverseNumberInString(int Num) {
+	vector<string> ConvertNumInto3DigitsGroups(long long int Num) {
 
 		string sNum = to_string(Num);
-		string ReverseNumberString = "";
-		for (short i = sNum.length() - 1; i >= 0; i--) {
-			ReverseNumberString += sNum[i];
+		vector<string>ThreeDigitsGroups;
+
+		string Group = "";
+
+		if (sNum.length() <= 3) {
+			Group = sNum;
+			ThreeDigitsGroups.push_back(Group);
 		}
-		return ReverseNumberString;
+
+		else {
+
+			short n = sNum.length() % 3;
+
+			if (n != 0) {
+				Group = sNum.substr(0, n);
+				ThreeDigitsGroups.push_back(Group);
+				sNum.erase(0, n);
+			}
+
+			for (short i = 0; i < sNum.length(); i +=3 ) {
+
+				Group = sNum.substr(i, 3);
+				ThreeDigitsGroups.push_back(Group);
+
+			}
+
+		}
+
+		return ThreeDigitsGroups;
+
 	}
 
+	void NumberToText(long long int Number, string OneToNine[9], string ElevenToNineteen[9], string ThirtyToNinety[8], string AboveHundred[4]) {
+
+		vector<string> Groups = ConvertNumInto3DigitsGroups(Number);
+
+		short NumberOfGroups = Groups.size(), Counter = 0;
+
+		for (string& Group : Groups) {
+
+			NumberToTextFor3Digits(Group, OneToNine, ElevenToNineteen, ThirtyToNinety);
+
+			if (NumberOfGroups - Counter > 0) {
+				cout << " " << AboveHundred[NumberOfGroups - Counter - 1] << " ";
+			}
+
+			Counter++;
+
+		}
+
+	}
 
 	void Task() {
 
-		int Number = ReadNumber("Enter a Number? ");  //5843
+		long long int Number = ReadNumber("Enter a Number? ");
 
 		string OneToNine[9] = { "One", "Two", "Three", "Four", "Five", "six", "Seven", "Eight", "Nine" };
 		string ElevenToNineteen[9] = { "Eleven", "Twelve", "Thirteen", "Fourteen", "Fifteen", "Sixteen", "Seventeen", "Eighteen", "Nineteen" };
 		string ThirtyToNinety[8] = { "Twenty","Thirty","Forty","Fifty","Sixty","Seventy","Eighty","Ninety" };
-		string AboveHundred[8] = { "Hundred","Thousand","Million","Billion","Trillion" };
+		string AboveHundred[6] = { "", "Thousand","Million","Billion","Trillion","Quadrillion" };
 
-		//WriteNumber(Number, OneToNine);
-		
-		cout << ReverseNumberInString(Number);
+		NumberToText(Number, OneToNine, ElevenToNineteen, ThirtyToNinety, AboveHundred);
+		cout << endl;
 
-		// 0->10 as them 
-		// 11->19 the second num 1
-		// if the second num 2,3,4,5,6,7,8,9 and the first from 1->9
-		// handred  the third num from OneToNine and then the other two from OneToNine, ElevenToNineteen
 
 	}
 
