@@ -14,7 +14,11 @@ namespace P01_NumberToText {
 		return Number;
 	}
 
-	void NumberToTextFor3Digits(string NumInString, string OneToNine[9], string ElevenToNineteen[9], string ThirtyToNinety[8]) {
+	void NumberToTextFor3Digits(string NumInString) {
+
+		string OneToNine[9] = { "One", "Two", "Three", "Four", "Five", "six", "Seven", "Eight", "Nine" };
+		string ElevenToNineteen[9] = { "Eleven", "Twelve", "Thirteen", "Fourteen", "Fifteen", "Sixteen", "Seventeen", "Eighteen", "Nineteen" };
+		string TenToNinety[9] = { "Ten","Twenty","Thirty","Forty","Fifty","Sixty","Seventy","Eighty","Ninety" };
 
 		if (NumInString.length() == 1) {
 
@@ -29,47 +33,69 @@ namespace P01_NumberToText {
 
 		else if (NumInString.length() == 2) {
 
-			if (NumInString[0] - '0' == 0) {
+			if (NumInString[0] - '0' == 0 && NumInString[1] - '0' != 0) {      //0_
 				cout << OneToNine[(NumInString[1] - '0') - 1];
 			}
-		    else if (NumInString[0] - '0' == 1 && NumInString[1] - '0' == 0) {
-				cout << "Ten";
+			else if (NumInString[0] - '0' != 0 && NumInString[1] - '0' == 0) { //_0  
+				cout << TenToNinety[(NumInString[0] - '0') - 1];
+
 			}
-		    else if ( NumInString[0] - '0' == 1 && NumInString[2] - '0' != 0) {
+			else if (NumInString[0] - '0' == 1 && NumInString[1] - '0' != 0) { //__  11->19
 				cout << ElevenToNineteen[(NumInString[1] - '0') - 1];
+
 			}
-			else if (NumInString[0] - '0' >= 2 && NumInString[0] - '0' <= 9) {
-				cout << ThirtyToNinety[NumInString[0] - '0' - 2] << " "
-					<< OneToNine[(NumInString[1] - '0') - 1];
+			else if (NumInString[0] - '0' >= 2 && NumInString[1] - '0' != 0) { //__  21->99
+				cout << TenToNinety[(NumInString[0] - '0') - 1]
+					<< " " << OneToNine[(NumInString[1] - '0') - 1];
+
 			}
 
 		}
 
 		else if (NumInString.length() == 3) {
 
-			if (NumInString[0] - '0' == 0 && NumInString[1] - '0' == 0) {
+			if (NumInString[0] - '0' == 0 && NumInString[1] - '0' == 0 && NumInString[2] - '0' != 0) { //00_
 				cout << OneToNine[(NumInString[2] - '0') - 1];
 			}
-		    else if (NumInString[1] - '0' == 0 && NumInString[2] - '0' == 0) {
+		    else if (NumInString[0] - '0' != 0 && NumInString[1] - '0' == 0 && NumInString[2] - '0' == 0) { //_00
 				cout << OneToNine[(NumInString[0] - '0') - 1] << " Hundred";
 
 			}
-			else if (NumInString[1] - '0' == 1 && NumInString[2] - '0' == 0) {
-				cout << OneToNine[(NumInString[0] - '0') - 1] << " Hundred "
-					<< "Ten";
+			else if (NumInString[0] - '0' == 0 && NumInString[1] - '0' != 0 && NumInString[2] - '0' == 0) { //0_0  
+				cout << TenToNinety[(NumInString[1] - '0') - 1];  
+
 			}
-			else if (NumInString[1] - '0' == 1 && NumInString[2] - '0' != 0) {
+			else if (NumInString[0] - '0' != 0 && NumInString[1] - '0' != 0 && NumInString[2] - '0' == 0) { //__0
+				cout << OneToNine[(NumInString[0] - '0') - 1] << " Hundred "
+					<< TenToNinety[(NumInString[1] - '0') - 1];
+
+			}
+			else if (NumInString[0] - '0' == 0 && NumInString[1] - '0' == 1 && NumInString[2] - '0' != 0) { //0__  11->19
+				cout << ElevenToNineteen[(NumInString[2] - '0') - 1];
+
+			}
+			else if (NumInString[0] - '0' == 0 && NumInString[1] - '0' >= 2 && NumInString[2] - '0' != 0) { //0__  21->99
+				cout << TenToNinety[(NumInString[1] - '0') - 1]
+					<< " " << OneToNine[(NumInString[2] - '0') - 1];
+
+			}
+			else if (NumInString[0] - '0' != 0 && NumInString[1] - '0' == 0 && NumInString[2] - '0' != 0) { //_0_
+				cout << OneToNine[(NumInString[0] - '0') - 1] << " Hundred "
+					<< OneToNine[(NumInString[2] - '0') - 1];
+			}
+			else if (NumInString[0] - '0' != 0 && NumInString[1] - '0' == 1 && NumInString[2] - '0' != 0) { //___  111->919 no zeros the second is always 1
 				cout << OneToNine[(NumInString[0] - '0') - 1] << " Hundred "
 					<< ElevenToNineteen[(NumInString[2] - '0') - 1];
+
 			}
-			else if (NumInString[1] - '0' >= 2 && NumInString[1] - '0' <= 9) {
+			else if (NumInString[0] - '0' != 0 && NumInString[1] - '0' >= 2 && NumInString[2] - '0' != 0) { //___  121->999 no zeros
 				cout << OneToNine[(NumInString[0] - '0') - 1] << " Hundred "
-					<< ThirtyToNinety[NumInString[1] - '0' - 2] << " "
-					<< OneToNine[(NumInString[2] - '0') - 1];
+					<< TenToNinety[(NumInString[1] - '0') - 1]
+					<< " " << OneToNine[(NumInString[2] - '0') - 1];
+
 			}
 
 		}
-
 	
 	}
 
@@ -108,7 +134,9 @@ namespace P01_NumberToText {
 
 	}
 
-	void NumberToText(long long int Number, string OneToNine[9], string ElevenToNineteen[9], string ThirtyToNinety[8], string AboveHundred[4]) {
+	void NumberToText(long long int Number) {
+
+		string AboveHundred[6] = { "", "Thousand","Million","Billion","Trillion","Quadrillion" };
 
 		vector<string> Groups = ConvertNumInto3DigitsGroups(Number);
 
@@ -116,7 +144,7 @@ namespace P01_NumberToText {
 
 		for (string& Group : Groups) {
 
-			NumberToTextFor3Digits(Group, OneToNine, ElevenToNineteen, ThirtyToNinety);
+			NumberToTextFor3Digits(Group);
 
 			if (NumberOfGroups - Counter > 0) {
 				cout << " " << AboveHundred[NumberOfGroups - Counter - 1] << " ";
@@ -132,12 +160,7 @@ namespace P01_NumberToText {
 
 		long long int Number = ReadNumber("Enter a Number? ");
 
-		string OneToNine[9] = { "One", "Two", "Three", "Four", "Five", "six", "Seven", "Eight", "Nine" };
-		string ElevenToNineteen[9] = { "Eleven", "Twelve", "Thirteen", "Fourteen", "Fifteen", "Sixteen", "Seventeen", "Eighteen", "Nineteen" };
-		string ThirtyToNinety[8] = { "Twenty","Thirty","Forty","Fifty","Sixty","Seventy","Eighty","Ninety" };
-		string AboveHundred[6] = { "", "Thousand","Million","Billion","Trillion","Quadrillion" };
-
-		NumberToText(Number, OneToNine, ElevenToNineteen, ThirtyToNinety, AboveHundred);
+		NumberToText(Number);
 		cout << endl;
 
 
