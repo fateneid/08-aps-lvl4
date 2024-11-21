@@ -23,5 +23,8 @@
     <ClInclude Include="P01_NumberToText.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="P01_NumberToText_ProfSol.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>
