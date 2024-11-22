@@ -26,5 +26,8 @@
     <ClInclude Include="P01_NumberToText_ProfSol.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="P02_LeapYear.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

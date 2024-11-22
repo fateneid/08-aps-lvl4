@@ -132,6 +132,7 @@
   <ItemGroup>
     <ClInclude Include="P01_NumberToText.h" />
     <ClInclude Include="P01_NumberToText_ProfSol.h" />
+    <ClInclude Include="P02_LeapYear.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
