@@ -29,5 +29,8 @@
     <ClInclude Include="P02_LeapYear.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="P03_LeapYear_OneLineOfCode.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>
