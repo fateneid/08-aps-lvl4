@@ -32,5 +32,8 @@
     <ClInclude Include="P03_LeapYear_OneLineOfCode.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="P04_NumberOfDaysHoursMinutesSecondsInAYear.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>
