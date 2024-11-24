@@ -35,5 +35,8 @@
     <ClInclude Include="P04_NumberOfDaysHoursMinutesSecondsInAYear.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="P05_NumberOfDaysHoursMinutesSecondsInAMonth.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

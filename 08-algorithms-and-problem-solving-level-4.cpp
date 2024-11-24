@@ -4,13 +4,14 @@
 #include "P02_LeapYear.h"
 #include "P03_LeapYear_OneLineOfCode.h"
 #include "P04_NumberOfDaysHoursMinutesSecondsInAYear.h"
+#include "P05_NumberOfDaysHoursMinutesSecondsInAMonth.h"
 
 using namespace std;
 
 int main()
 {
 
-	P04_NumberOfDaysHoursMinutesSecondsInAYear::Task();
+	P05_NumberOfDaysHoursMinutesSecondsInAMonth::Task();
 
 
 	
