@@ -38,5 +38,8 @@
     <ClInclude Include="P05_NumberOfDaysHoursMinutesSecondsInAMonth.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="P06_NumberOfDaysInAMonthShortLogic.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

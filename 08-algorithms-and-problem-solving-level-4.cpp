@@ -5,13 +5,14 @@
 #include "P03_LeapYear_OneLineOfCode.h"
 #include "P04_NumberOfDaysHoursMinutesSecondsInAYear.h"
 #include "P05_NumberOfDaysHoursMinutesSecondsInAMonth.h"
+#include "P06_NumberOfDaysInAMonthShortLogic.h"
 
 using namespace std;
 
 int main()
 {
 
-	P05_NumberOfDaysHoursMinutesSecondsInAMonth::Task();
+	P06_NumberOfDaysInAMonthShortLogic::Task();
 
 
 	
