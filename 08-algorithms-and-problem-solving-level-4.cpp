@@ -6,13 +6,14 @@
 #include "P04_NumberOfDaysHoursMinutesSecondsInAYear.h"
 #include "P05_NumberOfDaysHoursMinutesSecondsInAMonth.h"
 #include "P06_NumberOfDaysInAMonthShortLogic.h"
+#include "P07_DayName.h"
 
 using namespace std;
 
 int main()
 {
 
-	P06_NumberOfDaysInAMonthShortLogic::Task();
+	P07_DayName::Task();
 
 
 	

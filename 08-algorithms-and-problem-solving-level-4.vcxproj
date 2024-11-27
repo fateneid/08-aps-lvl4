@@ -137,6 +137,7 @@
     <ClInclude Include="P04_NumberOfDaysHoursMinutesSecondsInAYear.h" />
     <ClInclude Include="P05_NumberOfDaysHoursMinutesSecondsInAMonth.h" />
     <ClInclude Include="P06_NumberOfDaysInAMonthShortLogic.h" />
+    <ClInclude Include="P07_DayName.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

@@ -41,5 +41,8 @@
     <ClInclude Include="P06_NumberOfDaysInAMonthShortLogic.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="P07_DayName.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>
