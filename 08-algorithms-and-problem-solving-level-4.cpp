@@ -7,13 +7,14 @@
 #include "P05_NumberOfDaysHoursMinutesSecondsInAMonth.h"
 #include "P06_NumberOfDaysInAMonthShortLogic.h"
 #include "P07_DayName.h"
+#include "P08_MonthCalendar.h"
 
 using namespace std;
 
 int main()
 {
 
-	P07_DayName::Task();
+	P08_MonthCalendar::Task();
 
 
 	
