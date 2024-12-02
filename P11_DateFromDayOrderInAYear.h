@@ -49,23 +49,23 @@ namespace P11_DateFromDayOrderInAYear {
 
 		stDate Date;
 		Date.Year = Year;
-		Date.Day = DayOrderInAYear;
+		Date.Month = 1;
 
-		for (short i = 1; i <= 12; i++) {
+		short RemainingDays = DayOrderInAYear;
+		short MonthDays = 0;
 
-			short MonthDays = NumberOfDaysInAMonth(Year, i);
-			if (MonthDays <= Date.Day) {
-				Date.Day -= MonthDays;
+		while (true) {
+
+			MonthDays = NumberOfDaysInAMonth(Year, Date.Month);
+
+			if (RemainingDays > MonthDays) {
+				RemainingDays -= MonthDays;
 				Date.Month++;
 			}
 			else {
+				Date.Day = RemainingDays;
 				break;
 			}
-			
-		}
-
-		if (Date.Day >= 1) {
-			Date.Month++;
 		}
 
 		return Date;
@@ -81,7 +81,8 @@ namespace P11_DateFromDayOrderInAYear {
 		cout << "\nNumber of Days from the beginning of year is " << DayOrderInAYear << endl;
 
 		stDate Date = DateFromDayOrderInAYear(Year, DayOrderInAYear);
-		cout << "Date for [" << DayOrderInAYear << "] is: " << Date.Day << "/" << Date.Month << "/" << Date.Year << endl;
+		cout << "Date for [" << DayOrderInAYear << "] is: ";
+		cout << Date.Day << "/" << Date.Month << "/" << Date.Year << endl;
 
 
 	}
