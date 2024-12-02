@@ -53,5 +53,8 @@
     <ClInclude Include="P10_DaysFromTheBeginningOfYear.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="P11_DateFromDayOrderInAYear.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>
