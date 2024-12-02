@@ -139,6 +139,7 @@
     <ClInclude Include="P06_NumberOfDaysInAMonthShortLogic.h" />
     <ClInclude Include="P07_DayName.h" />
     <ClInclude Include="P08_MonthCalendar.h" />
+    <ClInclude Include="P09_YearCalendar.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

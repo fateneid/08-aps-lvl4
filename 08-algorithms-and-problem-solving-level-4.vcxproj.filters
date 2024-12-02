@@ -47,5 +47,8 @@
     <ClInclude Include="P08_MonthCalendar.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="P09_YearCalendar.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>
