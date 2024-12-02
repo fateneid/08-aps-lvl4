@@ -9,13 +9,14 @@
 #include "P07_DayName.h"
 #include "P08_MonthCalendar.h"
 #include "P09_YearCalendar.h"
+#include "P10_DaysFromTheBeginningOfYear.h"
 
 using namespace std;
 
 int main()
 {
 
-	P09_YearCalendar::Task();
+	P10_DaysFromTheBeginningOfYear::Task();
 
 
 	
