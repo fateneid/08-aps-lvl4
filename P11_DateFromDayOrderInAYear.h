@@ -26,7 +26,7 @@ namespace P11_DateFromDayOrderInAYear {
 
 	short NumberOfDaysInAMonth(short Year, short Month) {
 
-		if (Month < 0 || Month > 12) return 0;
+		if (Month < 1 || Month > 12) return 0;
 
 		return Month == 2 ? (IsLeapYear(Year) ? 29 : 28) :
 			((Month == 4 || Month == 6 || Month == 9 || Month == 11) ? 30 : 31);
