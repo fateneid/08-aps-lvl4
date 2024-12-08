@@ -12,13 +12,14 @@
 #include "P10_DaysFromTheBeginningOfYear.h"
 #include "P11_DateFromDayOrderInAYear.h"
 #include "P12_AddDaysToDate.h"
+#include "P13_Date1LessThanDate2.h"
 
 using namespace std;
 
 int main()
 {
 
-	P12_AddDaysToDate::Task();
+	P13_Date1LessThanDate2::Task();
 
 
 	

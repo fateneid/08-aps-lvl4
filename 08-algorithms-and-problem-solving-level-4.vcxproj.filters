@@ -59,5 +59,8 @@
     <ClInclude Include="P12_AddDaysToDate.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="P13_Date1LessThanDate2.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>
