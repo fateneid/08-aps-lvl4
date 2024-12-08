@@ -142,6 +142,7 @@
     <ClInclude Include="P09_YearCalendar.h" />
     <ClInclude Include="P10_DaysFromTheBeginningOfYear.h" />
     <ClInclude Include="P11_DateFromDayOrderInAYear.h" />
+    <ClInclude Include="P12_AddDaysToDate.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

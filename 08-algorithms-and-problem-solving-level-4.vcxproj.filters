@@ -56,5 +56,8 @@
     <ClInclude Include="P11_DateFromDayOrderInAYear.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="P12_AddDaysToDate.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>
