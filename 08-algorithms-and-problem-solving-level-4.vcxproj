@@ -144,6 +144,7 @@
     <ClInclude Include="P11_DateFromDayOrderInAYear.h" />
     <ClInclude Include="P12_AddDaysToDate.h" />
     <ClInclude Include="P13_Date1LessThanDate2.h" />
+    <ClInclude Include="P14_Date1EqualsToDate2.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

@@ -13,13 +13,14 @@
 #include "P11_DateFromDayOrderInAYear.h"
 #include "P12_AddDaysToDate.h"
 #include "P13_Date1LessThanDate2.h"
+#include "P14_Date1EqualsToDate2.h"
 
 using namespace std;
 
 int main()
 {
 
-	P13_Date1LessThanDate2::Task();
+	P14_Date1EqualsToDate2::Task();
 
 
 	
