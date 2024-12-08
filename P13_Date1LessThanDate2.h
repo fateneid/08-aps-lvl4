@@ -20,35 +20,6 @@ namespace P13_Date1LessThanDate2 {
 		return Number;
 	}
 
-	bool IsLeapYear(short Year) {
-		return (Year % 400 == 0) || (Year % 4 == 0 && Year % 100 != 0);
-	}
-
-	short NumberOfDaysInAYear(short Year) {
-		return IsLeapYear(Year) ? 366 : 365;
-	}
-
-	short NumberOfDaysInAMonth(short Year, short Month) {
-
-		if (Month < 1 || Month > 12) return 0;
-
-		return Month == 2 ? (IsLeapYear(Year) ? 29 : 28) :
-			((Month == 4 || Month == 6 || Month == 9 || Month == 11) ? 30 : 31);
-
-	}
-
-	short DaysFromTheBeginningOfYear(short Year, short Month, short Day) {
-
-		short TotalDays = 0;
-		for (short i = 1; i < Month; i++) {
-			TotalDays += NumberOfDaysInAMonth(Year, i);
-		}
-		TotalDays += Day;
-
-		return TotalDays;
-
-	}
-
 	bool IsDate1BeforeDate2(stDate Date1, stDate Date2) {
 		
 		return (Date1.Year < Date2.Year) || (Date1.Year == Date2.Year && Date1.Month < Date2.Month) ||
