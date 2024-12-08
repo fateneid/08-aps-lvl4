@@ -68,5 +68,8 @@
     <ClInclude Include="P15_LastDayLastMonth.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="P16_IncreaseDateByOneDay.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

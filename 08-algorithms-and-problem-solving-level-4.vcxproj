@@ -146,6 +146,7 @@
     <ClInclude Include="P13_Date1LessThanDate2.h" />
     <ClInclude Include="P14_Date1EqualsToDate2.h" />
     <ClInclude Include="P15_LastDayLastMonth.h" />
+    <ClInclude Include="P16_IncreaseDateByOneDay.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
