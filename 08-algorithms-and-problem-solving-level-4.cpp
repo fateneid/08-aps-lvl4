@@ -14,13 +14,14 @@
 #include "P12_AddDaysToDate.h"
 #include "P13_Date1LessThanDate2.h"
 #include "P14_Date1EqualsToDate2.h"
+#include "P15_LastDayLastMonth.h"
 
 using namespace std;
 
 int main()
 {
 
-	P14_Date1EqualsToDate2::Task();
+	P15_LastDayLastMonth::Task();
 
 
 	
