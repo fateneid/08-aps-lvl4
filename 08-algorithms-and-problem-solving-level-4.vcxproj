@@ -148,6 +148,7 @@
     <ClInclude Include="P15_LastDayLastMonth.h" />
     <ClInclude Include="P16_IncreaseDateByOneDay.h" />
     <ClInclude Include="P17_DiffInDays.h" />
+    <ClInclude Include="P18_YourAgeInDays.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
