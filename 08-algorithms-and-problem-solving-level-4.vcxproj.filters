@@ -71,5 +71,8 @@
     <ClInclude Include="P16_IncreaseDateByOneDay.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="P17_DiffInDays.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

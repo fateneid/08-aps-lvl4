@@ -16,13 +16,14 @@
 #include "P14_Date1EqualsToDate2.h"
 #include "P15_LastDayLastMonth.h"
 #include "P16_IncreaseDateByOneDay.h"
+#include "P17_DiffInDays.h"
 
 using namespace std;
 
 int main()
 {
 
-	P16_IncreaseDateByOneDay::Task();
+	P17_DiffInDays::Task();
 
 
 	
