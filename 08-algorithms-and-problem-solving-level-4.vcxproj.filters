@@ -80,5 +80,8 @@
     <ClInclude Include="P19_DiffInDaysNegativeDays.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="P20ToP32_IncreaseDateProblems.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>
