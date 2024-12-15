@@ -151,6 +151,7 @@
     <ClInclude Include="P18_YourAgeInDays.h" />
     <ClInclude Include="P19_DiffInDaysNegativeDays.h" />
     <ClInclude Include="P20ToP32_IncreaseDateProblems.h" />
+    <ClInclude Include="P33To46_DecreaseDateProblems.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

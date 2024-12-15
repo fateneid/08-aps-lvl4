@@ -83,5 +83,8 @@
     <ClInclude Include="P20ToP32_IncreaseDateProblems.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="P33To46_DecreaseDateProblems.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>
