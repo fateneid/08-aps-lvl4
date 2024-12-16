@@ -21,13 +21,14 @@
 #include "P19_DiffInDaysNegativeDays.h"
 #include "P20ToP32_IncreaseDateProblems.h"
 #include "P33To46_DecreaseDateProblems.h"
+#include "P47ToP53_MoreDateProblems.h"
 
 using namespace std;
 
 int main()
 {
 
-	P33To46_DecreaseDateProblems::Task();
+	P47ToP53_MoreDateProblems::Task();
 
 
 	
