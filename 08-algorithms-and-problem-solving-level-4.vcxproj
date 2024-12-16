@@ -159,6 +159,7 @@
     <ClInclude Include="P57_CompareDateFunction.h" />
     <ClInclude Include="P58_IsOverlapPeriods.h" />
     <ClInclude Include="P59_PeriodLengthInDays.h" />
+    <ClInclude Include="P60_IsDateWithinPeriod.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

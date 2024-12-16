@@ -28,13 +28,14 @@
 #include "P57_CompareDateFunction.h"
 #include "P58_IsOverlapPeriods.h"
 #include "P59_PeriodLengthInDays.h"
+#include "P60_IsDateWithinPeriod.h"
 
 using namespace std;
 
 int main()
 {
 
-	P59_PeriodLengthInDays::Task();
+	P60_IsDateWithinPeriod::Task();
 
 
 	
