@@ -157,6 +157,7 @@
     <ClInclude Include="P55_CalculateVacationReturnDate.h" />
     <ClInclude Include="P56_IsDate1AfterDate2.h" />
     <ClInclude Include="P57_CompareDateFunction.h" />
+    <ClInclude Include="P58_IsOverlapPeriods.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
