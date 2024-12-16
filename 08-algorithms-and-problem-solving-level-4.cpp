@@ -22,13 +22,14 @@
 #include "P20ToP32_IncreaseDateProblems.h"
 #include "P33To46_DecreaseDateProblems.h"
 #include "P47ToP53_MoreDateProblems.h"
+#include "P54_CalculateVacationDays.h"
 
 using namespace std;
 
 int main()
 {
 
-	P47ToP53_MoreDateProblems::Task();
+	P54_CalculateVacationDays::Task();
 
 
 	
