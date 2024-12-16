@@ -154,6 +154,7 @@
     <ClInclude Include="P33To46_DecreaseDateProblems.h" />
     <ClInclude Include="P47ToP53_MoreDateProblems.h" />
     <ClInclude Include="P54_CalculateVacationDays.h" />
+    <ClInclude Include="P55_CalculateVacationReturnDate.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
