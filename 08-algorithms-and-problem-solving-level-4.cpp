@@ -30,13 +30,14 @@
 #include "P59_PeriodLengthInDays.h"
 #include "P60_IsDateWithinPeriod.h"
 #include "P61_CountOverlapDays.h"
+#include "P62_ValidateDate.h"
 
 using namespace std;
 
 int main()
 {
 
-	P61_CountOverlapDays::Task();
+	P62_ValidateDate::Task();
 
 
 	

@@ -113,5 +113,8 @@
     <ClInclude Include="P61_CountOverlapDays.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="P62_ValidateDate.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>
