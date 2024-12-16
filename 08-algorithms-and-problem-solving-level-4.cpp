@@ -25,13 +25,14 @@
 #include "P54_CalculateVacationDays.h"
 #include "P55_CalculateVacationReturnDate.h"
 #include "P56_IsDate1AfterDate2.h"
+#include "P57_CompareDateFunction.h"
 
 using namespace std;
 
 int main()
 {
 
-	P56_IsDate1AfterDate2::Task();
+	P57_CompareDateFunction::Task();
 
 
 	

@@ -98,5 +98,8 @@
     <ClInclude Include="P56_IsDate1AfterDate2.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="P57_CompareDateFunction.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>
