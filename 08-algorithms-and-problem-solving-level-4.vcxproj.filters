@@ -104,5 +104,8 @@
     <ClInclude Include="P58_IsOverlapPeriods.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="P59_PeriodLengthInDays.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>
