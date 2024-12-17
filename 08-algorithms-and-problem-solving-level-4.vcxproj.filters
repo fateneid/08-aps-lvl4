@@ -116,5 +116,8 @@
     <ClInclude Include="P62_ValidateDate.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="P63AndP64_ReadPrintDateString.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

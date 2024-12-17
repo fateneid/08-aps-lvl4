@@ -162,6 +162,7 @@
     <ClInclude Include="P60_IsDateWithinPeriod.h" />
     <ClInclude Include="P61_CountOverlapDays.h" />
     <ClInclude Include="P62_ValidateDate.h" />
+    <ClInclude Include="P63AndP64_ReadPrintDateString.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

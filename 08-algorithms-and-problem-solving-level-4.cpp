@@ -31,13 +31,14 @@
 #include "P60_IsDateWithinPeriod.h"
 #include "P61_CountOverlapDays.h"
 #include "P62_ValidateDate.h"
+#include "P63AndP64_ReadPrintDateString.h"
 
 using namespace std;
 
 int main()
 {
 
-	P62_ValidateDate::Task();
+	P63AndP64_ReadPrintDateString::Task();
 
 
 	
