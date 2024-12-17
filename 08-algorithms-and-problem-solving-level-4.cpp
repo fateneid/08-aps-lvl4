@@ -44,3 +44,16 @@ int main()
 
 	
 }
+
+/*
+How to use:
+
+1. Include the library.
+2. Use the corresponding namespace, which matches the library name.
+3. Call the 'Task' function to execute the problem.
+
+Each library is designed for a specific problem, 
+and its namespace contains all the necessary functions to solve it. 
+Simply include the library, access its functions through the namespace, 
+and run the problem by calling 'Task'.
+*/
