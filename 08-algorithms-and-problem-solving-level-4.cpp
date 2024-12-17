@@ -32,13 +32,14 @@
 #include "P61_CountOverlapDays.h"
 #include "P62_ValidateDate.h"
 #include "P63AndP64_ReadPrintDateString.h"
+#include "P65_FormatDate.h"
 
 using namespace std;
 
 int main()
 {
 
-	P63AndP64_ReadPrintDateString::Task();
+	P65_FormatDate::Task();
 
 
 	
